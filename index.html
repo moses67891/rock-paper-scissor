@@ -7,6 +7,15 @@
 </head>
 <body>
     <script>
+         function getHumanChoice(){
+            let humanChoice = prompt("Enter rock, paper or scissor: ").toLowerCase();
+            console.log(humanChoice)
+            while(humanChoice !== 'rock'&& humanChoice !== 'paper' && humanChoice !== 'scissor'){
+                console.log("Invalid input!")
+                humanChoice = prompt("Enter rock, paper or scissors: ").toLowerCase();
+            }
+            return humanChoice
+        }
         function getComputerChoice(){
            let choice = Math.random()*3;
            if(choice < 1){
