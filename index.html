@@ -29,6 +29,32 @@
             return "scissor"
            }
         }
+        function playRound(){
+            let humanSelection = getHumanChoice();
+            let computerSelection = getComputerChoice();
+            if (computerSelection == "rock" && humanSelection == "scissor"){
+                console.log("You lose rock beats scissor");
+                ++computerScore;
+            }else if(computerSelection == "scissor" && humanSelection == "paper"){
+                console.log("You lose scissor beats paper");
+                ++computerScore;
+            }else if(computerSelection == "paper" && humanSelection == "rock"){
+                console.log("You lose paper beats rock")
+                ++computerScore;
+            }else if(computerSelection == humanSelection){
+                console.log("Draw")
+            }else if(humanSelection == "rock" && computerSelection == "scissor"){
+                console.log("You win rock beats scissor")
+                ++humanScore;
+            }else if(humanSelection == 'scissor' && computerSelection == 'paper'){
+                console.log("You win scissor beats paper")
+                ++humanScore;
+            }else if(humanSelection == 'paper' && computerSelection == 'rock'){
+                console.log("You win paper beats rock")
+                ++humanScore;
+            }
+            console.log(`Your Score = ${humanScore}, Computer Score = ${computerScore}`);
+        }
     </script>
 </body>
 </html>
