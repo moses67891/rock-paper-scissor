@@ -1,1 +1,1 @@
-Play rock, paper, scissor in the console
+Play rock, paper, scissor GUI
